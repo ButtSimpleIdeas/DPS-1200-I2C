@@ -53,7 +53,7 @@ EEPROM, and a 16F886 PIC microcontroller. Unfortunately, it does not seem to
 conform to PMBus or SMBus message standards, so even with community support, so
 far only a limited amount of information has been decoded. The EEPROM contains
 manufacturer information, and can be repurposed to store information that you
-would like to save in EEPROM memory. Some supplies have a device at 0x1F. Based
+would like to save in EEPROM memory. Some supplies have a device at 0x4F. Based
 on the address, this could be a separate I2C temperature sensor and controller
 like the MCP9808. We have not explored this yet, but tell us what you figure
 out!
