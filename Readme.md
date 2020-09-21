@@ -125,12 +125,12 @@ regarding CRC generation on YouTube and the web.
 
 ## The Sketches
 
-These sketches were tested on DPS-1200 (P/N …) and DPS-750 (P/N: supplies, but
-are expected to work on all common slot supplies. The I2C sketches can be used
-without the adapter, but soldering the connections to the power supply, and
-using a 3.3v compatible microcontroller to properly interface to the 3.3V Power
-Supply I2C interface is required. Powering on/off the supply requires hardware
-interfacing as well.
+These sketches were tested on DPS-1200 and DPS-750 supplies, but are expected to
+work on all common slot supplies. The I2C sketches can be used without the
+adapter, but soldering the connections to the power supply, and using a 3.3v
+compatible microcontroller to properly interface to the 3.3V Power Supply I2C
+interface is required. Powering on/off the supply requires hardware interfacing
+as well.
 
 These sketches were written to be butt simple, with very little fluff. The
 concept was to provide a minimal core functionality that you can expand on. Each
