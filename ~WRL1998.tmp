@@ -54,9 +54,9 @@ conform to PMBus or SMBus message standards, so even with community support, so
 far only a limited amount of information has been decoded. The EEPROM contains
 manufacturer information, and can be repurposed to store information that you
 would like to save in EEPROM memory. Some supplies have a device at 0x4F. Based
-on the address, this could be a separate I2C precision Voltage/Current/Power
-monitor like an INA260, or a Temperature sensor like PCT2075. We have not
-explored this yet, but tell us what you figure out!
+on the address, this could be a separate I2C temperature sensor and controller
+like the MCP9808. We have not explored this yet, but tell us what you figure
+out!
 
 # The Adapter Hardware
 
@@ -66,10 +66,7 @@ hobbyist microcontroller, we wanted to make an adapter that was designed to
 interface to this inexpensive and popular Arduino board. The DPS-1200 I2C buss
 is a 3.3V logic buss; therefore, this adapter has an on-board 3.3V regulator,
 and 5V \<\> 3.3V I2C level shift logic. An optocoupler circuit is used to
-interface an Arduino Digital Output pin to the power supply. Here is a view of
-the adapter:
-
-![](media/10a2d3a6707811b840c74683a077d880.jpeg)
+interface an Arduino Digital Output pin to the power supply.
 
 The 2-pin header is the “R_On” header. It is meant to be connected to a Digital
 Out pin of the Arduino to turn the DPS_1200 ON and OFF under Arduino control.
@@ -94,10 +91,6 @@ A0-A2 changes the I2C address of the PIC on the I2C buss. This allows more than
 one supply to be connected to I2C and communicate with the microcontroller. If
 left open (“1”), the 2402 EEPROM will be address 0x57 and the PIC will be at
 address 0x5F.
-
-Here is an adapter connected to an Arduino Uno and a laptop
-
-![](media/073c8ed611de2b1d292461f7a145bfe0.jpeg)
 
 We have made a dozen or so adapters, if the demand is strong, we can always make
 more. To obtain one of these adapters, visit our eBay store at:
@@ -146,7 +139,8 @@ grade supplies for hobby use. Need a product, or have an idea? Go to:
 
 Development depends on the ability to leverage from the experiences of those
 that came before you. Significant shout out goes to 2 main sources of
-information in the development of the hardware and software for this project:
+information in the development of the hardware and software for this project:  
+
 
 <https://github.com/raplin/DPS-1200FB> - Dr. Tune (Richard Aplin) provided a
 great start in reverse engineering the DPS-1200. Note: We use Ghidra, the NSA's
